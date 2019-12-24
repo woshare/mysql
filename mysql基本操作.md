@@ -106,4 +106,12 @@ ALTER TABLE mywordlists DROP FOREIGN KEY `word_wordbook`;
 
 ### INSERT INTO…ON DUPLICATE KEY UPDATE
 >1，insert的数据会引起唯一索引（包括主键索引）的冲突，即这个唯一值重复了，则不会执行insert操作，而执行后面的update操作  
->2，insert affect rows=1，update affect rows=2
+>2，insert affect rows=1，update affect rows=2   
+
+
+
+
+
+-- insert into version_english(id,os,channel_number,new_version_code,min_version_code,bad_version_code,apk_url,update_description,create_time,update_time) VALUES(1,1,1,16,2,'','https://word.ihumand.com/dev.html','test','2019-12-17 17:53:22','2019-12-17 17:53:22');
+
+ alter table version_english modify column id int not null auto_increment;
